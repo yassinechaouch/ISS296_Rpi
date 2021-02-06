@@ -1,0 +1,22 @@
+#
+####### example-requirements.txt #######
+#
+###### Requirements without Version Specifiers ######
+pygame
+goprocam
+GPIO
+mysql
+mysql_connector
+mysql-connector-python
+pillow
+pyYAML
+pilgram
+Button
+
+#
+###### Requirements with Version Specifiers ######
+# ==             # Version Matching. Must be version ***
+# >=             # Minimum version ***
+# !=             # Version Exclusion. Anything except version **
+# ~=             # Compatible release. Same as >= **, == **
+#
