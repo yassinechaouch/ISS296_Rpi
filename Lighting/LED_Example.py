@@ -10,7 +10,7 @@ for i in range(5):
     GPIO.output(8, GPIO.HIGH)  # Turn on
     sleep(1)  # Sleep for 1 second
     GPIO.output(8, GPIO.LOW)  # Turn off
-    sleep(1)  # Sleep for 1 second
+    sleep(1)  # Sleep for 1 secondit
 
 
 
