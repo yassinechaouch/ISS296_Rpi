@@ -9,7 +9,7 @@ mysql-connector-python
 pillow
 pyYAML
 pilgram
-Button
+gpiozero
 
 #
 ###### Requirements with Version Specifiers ######
