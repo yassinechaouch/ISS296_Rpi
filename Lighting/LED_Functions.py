@@ -11,6 +11,7 @@ while True:
     blue_led.on()
     sleep(1)
     blue_led.off()
+    
 
 
     '''red = LED(17)
