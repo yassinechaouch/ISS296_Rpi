@@ -14,7 +14,7 @@ p.start(100)
 
 try:
     while True:
-   	 GPIO.output(10, GPIO.HIGH)
+        GPIO.output(10, GPIO.HIGH)
 
         #if GPIO.input(16):
          #  GPIO.output(15, True)
