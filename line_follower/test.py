@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import RPi.GPIO as GPIO
 from time import sleep
 
@@ -22,7 +21,7 @@ print("\n")
 
 while (1):
 
-    x = input()
+    x = raw_input()
 
     if x == 'r':
         print("run")
@@ -81,39 +80,3 @@ while (1):
     else:
         print("<<<  wrong data  >>>")
         print("please enter the defined data to continue.....")
-=======
-import sys
-import time
-import RPi.GPIO as GPIO
-
-
-GPIO.cleanup()
-
-Forward= 8
-Backward=10
-sleeptime=1
-
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(Forward, GPIO.OUT)
-GPIO.setup(Backward, GPIO.OUT)
-
-def forward(x):
-    GPIO.output(Forward, GPIO.HIGH)
-    print("Moving Forward")
-    time.sleep(x)
-    GPIO.output(Forward, GPIO.LOW)
-
-def reverse(x):
-    GPIO.output(Backward, GPIO.HIGH)
-    print("Moving Backward")
-    time.sleep(x)
-    GPIO.output(Backward, GPIO.LOW)
-
-while (1):
-
-    forward(5)
-    reverse(5)
-
-
-    
->>>>>>> 24bbcac367884cb2f117e33733cddc2a20bd1c00
