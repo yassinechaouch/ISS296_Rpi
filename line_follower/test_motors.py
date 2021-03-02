@@ -13,9 +13,9 @@ x =input("choose :")
 try:
     while True:
         if x:
-            GPIO.output(11, True)
+            GPIO.output(11, GPIO.HIGH)
         else:
-            GPIO.output(11, False)
+            GPIO.output(11, GPIO.LOW)
         #if GPIO.input(16):
          #  GPIO.output(15, True)
         #else:
