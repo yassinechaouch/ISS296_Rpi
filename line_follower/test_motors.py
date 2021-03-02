@@ -9,13 +9,13 @@ GPIO.setup(8, GPIO.OUT)
 GPIO.setup(10, GPIO.OUT)
 GPIO.setup(13, GPIO.OUT)
 GPIO.setup(15, GPIO.OUT)
-x =input("choose :")
+p=GPIO.PWM(8,1000)
+p.start(100)
+
 try:
     while True:
-        if x:
-            GPIO.output(10, GPIO.HIGH)
-        else:
-            GPIO.output(10, GPIO.LOW)
+   	 GPIO.output(10, GPIO.HIGH)
+
         #if GPIO.input(16):
          #  GPIO.output(15, True)
         #else:
