@@ -5,17 +5,17 @@ import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BOARD)
 #GPIO.setup(12, GPIO.IN)
 #GPIO.setup(16, GPIO.IN)
-GPIO.setup(7, GPIO.OUT)
-GPIO.setup(11, GPIO.OUT)
+GPIO.setup(8, GPIO.OUT)
+GPIO.setup(10, GPIO.OUT)
 GPIO.setup(13, GPIO.OUT)
 GPIO.setup(15, GPIO.OUT)
 x =input("choose :")
 try:
     while True:
         if x:
-            GPIO.output(11, GPIO.HIGH)
+            GPIO.output(10, GPIO.HIGH)
         else:
-            GPIO.output(11, GPIO.LOW)
+            GPIO.output(10, GPIO.LOW)
         #if GPIO.input(16):
          #  GPIO.output(15, True)
         #else:
