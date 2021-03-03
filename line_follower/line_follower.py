@@ -33,8 +33,12 @@ p2 = GPIO.PWM(en2 , 1000)
 while True:
     p1.start(50)
     p2.start(50)
+    print("sensor right", GPIO.input(rightsensor))
+    print("sensor left", GPIO.input(leftsensor))
 
     if GPIO.input(rightsensor)==True and GPIO.input(leftsensor)==True: #both while move forward
+
+
         GPIO.output(rightmotorforward,True) #1A+
         GPIO.output(leftmotorbackward,False) #1B-
 
