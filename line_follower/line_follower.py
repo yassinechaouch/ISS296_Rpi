@@ -36,7 +36,7 @@ while True:
     print("sensor right", GPIO.input(rightsensor))
     print("sensor left", GPIO.input(leftsensor))
 
-    if GPIO.input(rightsensor)==True and GPIO.input(leftsensor)==True: #both while move forward
+    if GPIO.input(rightsensor) and GPIO.input(leftsensor): #both while move forward
 
 
         GPIO.output(rightmotorforward,True) #1A+
