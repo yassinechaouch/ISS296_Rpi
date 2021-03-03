@@ -2,27 +2,24 @@ import RPi.GPIO as GPIO
 import time
 
 
+GPIO.cleanup()
 # Setting up the Rpi
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 
-button= 14
+button= 10
 
 GPIO.setup(button,GPIO.IN)
-GPIO.setup(10,GPIO.OUT)
-GPIO.setup(16,GPIO.OUT)
-GPIO.setup(18,GPIO.OUT)
+GPIO.setup(8,GPIO.OUT)
+#GPIO.setup(16,GPIO.OUT)
+#GPIO.setup(18,GPIO.OUT)
 GPIO.setwarnings(False)
 
 # Loop
-while button:
-    GPIO.output(10, True)
-    GPIO.output(16, True)
-    GPIO.output(18, True)
-    print("\nLEDs are ON")
-    time.sleep(1)
-    GPIO.output(10, False)
-    GPIO.output(16, False)
-    GPIO.output(18, False)
-    print("\nLEDs are OFF")
-    time.sleep(1)
+while True:
+
+    if GPIO.input(button):
+        GPIO.output(8, True)
+        print("\nLED ON")
+    else: GPIO.output(8, False)
+        
 

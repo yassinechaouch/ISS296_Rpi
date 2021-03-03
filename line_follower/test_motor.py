@@ -1,20 +1,25 @@
 # import GPIO library
 import RPi.GPIO as GPIO
-
+r
 # set GPIO numbering mode and define input and output pins
 GPIO.setmode(GPIO.BOARD)
-#GPIO.setup(12, GPIO.IN)
-#GPIO.setup(16, GPIO.IN)
-GPIO.setup(8, GPIO.OUT)
-GPIO.setup(10, GPIO.OUT)
-GPIO.setup(13, GPIO.OUT)
-GPIO.setup(15, GPIO.OUT)
-p=GPIO.PWM(8,1000)
-p.start(100)
+
+motor_f=8
+motor_b=10
+GPIO.setup(motor_f, GPIO.OUT)
+GPIO.setup(motor_b, GPIO.OUT)
+
+#p=GPIO.PWM(8,1000)
+#p.start(100)
 
 try:
     while True:
-        GPIO.output(10, GPIO.HIGH)
+        GPIO.output(motor_b, GPIO.HIGH)
+        GPIO.output(motor_f, GPIO.LOW)
+        sleep(5)
+        GPIO.output (motor_b, GPIO.LOW)
+        GPIO.output (motor_f, GPIO.HIGH)
+        sleep(5)
 
         #if GPIO.input(16):
          #  GPIO.output(15, True)
