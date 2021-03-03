@@ -1,6 +1,7 @@
 # import GPIO library
 import RPi.GPIO as GPIO
-r
+from time import sleep
+
 # set GPIO numbering mode and define input and output pins
 GPIO.setmode(GPIO.BOARD)
 
