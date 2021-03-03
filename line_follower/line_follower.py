@@ -34,19 +34,19 @@ while True:
         GPIO.output(rightmotorforward,True) #1A+
         GPIO.output(leftmotorbackward,True) #1B-
 
-        GPIO.output(leftmotorforward,True) #2A+
+        GPIO.output(leftmotorforward,False) #2A+
         GPIO.output(rightmotorbackward,False) #2B-
 
     elif GPIO.input(rightsensor)==True and GPIO.input(leftsensor)==False: #turn left
-        GPIO.output(rightmotorforward,True) #1A+
+        GPIO.output(rightmotorforward,False) #1A+
         GPIO.output(leftmotorbackward,False) #1B-
 
         GPIO.output(leftmotorforward,True) #2A+
         GPIO.output(rightmotorbackward,True) #2B-
 
     else:  #stay still
-        GPIO.output(rightmotorforward,True) #1A+
-        GPIO.output(leftmotorbackward,True) #1B-
+        GPIO.output(rightmotorforward,False) #1A+
+        GPIO.output(leftmotorbackward,False) #1B-
 
-        GPIO.output(leftmotorforward,True) #2A+
-        GPIO.output(rightmotorbackward,True) #2B-
+        GPIO.output(leftmotorforward,False) #2A+
+        GPIO.output(rightmotorbackward,False) #2B-
